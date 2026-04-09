@@ -1,0 +1,80 @@
+locale,id,title,description
+en,101,Java Basics,Introduction to Java programming
+ta,101,ஜாவா அடிப்படை,ஜாவா நிரலாக்கத்தின் அறிமுகம்
+hi,101,जावा बेसिक्स,जावा प्रोग्रामिंग का परिचय
+te,101,జావా బేసిక్స్,జావా ప్రోగ్రామింగ్ పరిచయం
+ml,101,ജാവ അടിസ്ഥാനങ്ങൾ,ജാവ പ്രോഗ്രാമിംഗിന്റെ പരിചയം
+kn,101,ಜಾವಾ ಮೂಲಭೂತಗಳು,ಜಾವಾ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಚಯ
+fr,101,Bases Java,Introduction à la programmation Java
+
+en,102,Web Development,HTML CSS and JavaScript fundamentals
+ta,102,வலை உருவாக்கம்,HTML CSS மற்றும் JavaScript அடிப்படைகள்
+hi,102,वेब डेवलपमेंट,HTML CSS और JavaScript के मूल सिद्धांत
+te,102,వెబ్ డెవలప్మెంట్,HTML CSS మరియు JavaScript మౌలికాలు
+ml,102,വെബ് ഡെവലപ്മെന്റ്,HTML CSS JavaScript അടിസ്ഥാനങ്ങൾ
+kn,102,ವೆಬ್ ಡೆವಲಪ್ಮೆಂಟ್,HTML CSS ಮತ್ತು JavaScript ಮೂಲಭೂತಗಳು
+fr,102,Développement Web,Bases de HTML CSS et JavaScript
+
+en,103,Data Structures,Learn arrays stacks and queues
+ta,103,டேட்டா ஸ்ட்ரக்சர்ஸ்,அறைகள் ஸ்டாக் மற்றும் க்யூ கற்றுக்கொள்ளுங்கள்
+hi,103,डेटा स्ट्रक्चर्स,एरे स्टैक और क्यू सीखें
+te,103,డేటా స్ట్రక్చర్స్,అర్రే స్టాక్ మరియు క్యూ నేర్చుకోండి
+ml,103,ഡാറ്റ സ്ട്രക്ചേഴ്സ്,അറേ സ്റ്റാക്ക് ക്യൂ പഠിക്കുക
+kn,103,ಡೇಟಾ ಸ್ಟ್ರಕ್ಚರ್ಸ್,ಅರೆ ಸ್ಟ್ಯಾಕ್ ಮತ್ತು ಕ್ಯೂ ಕಲಿಯಿರಿ
+fr,103,Structures de Données,Apprendre tableaux piles et files
+
+en,104,Database Systems,Introduction to SQL and databases
+ta,104,டேட்டாபேஸ் சிஸ்டம்ஸ்,SQL மற்றும் தரவுத்தள அறிமுகம்
+hi,104,डेटाबेस सिस्टम्स,SQL और डेटाबेस का परिचय
+te,104,డేటాబేస్ సిస్టమ్స్,SQL మరియు డేటాబేస్ పరిచయం
+ml,104,ഡാറ്റാബേസ് സിസ്റ്റംസ്,SQL ഡാറ്റാബേസ് പരിചയം
+kn,104,ಡೇಟಾಬೇಸ್ ಸಿಸ್ಟಮ್ಸ್,SQL ಮತ್ತು ಡೇಟಾಬೇಸ್ ಪರಿಚಯ
+fr,104,Systèmes de Base de Données,Introduction à SQL et bases de données
+
+en,105,Machine Learning,Basics of ML algorithms
+ta,105,மெஷின் லெர்னிங்,ML அல்காரிதம் அடிப்படைகள்
+hi,105,मशीन लर्निंग,ML एल्गोरिदम के मूल सिद्धांत
+te,105,మెషిన్ లెర్నింగ్,ML అల్గారిథమ్ మౌలికాలు
+ml,105,മെഷീൻ ലേണിംഗ്,ML ആൽഗോരിതം അടിസ്ഥാനങ്ങൾ
+kn,105,ಮಶಿನ್ ಲರ್ನಿಂಗ್,ML ಆಲ್ಗೊರಿದಮ್ ಮೂಲಭೂತಗಳು
+fr,105,Apprentissage Automatique,Bases des algorithmes ML
+
+en,106,Python Programming,Learn Python from scratch
+ta,106,பைதான் நிரலாக்கம்,பைதான் ஆரம்பத்திலிருந்து கற்றுக்கொள்ளுங்கள்
+hi,106,पायथन प्रोग्रामिंग,शुरुआत से पायथन सीखें
+te,106,పైథాన్ ప్రోగ్రామింగ్,ప్రారంభం నుండి పైథాన్ నేర్చుకోండి
+ml,106,പൈത്തൺ പ്രോഗ്രാമിംഗ്,ആരംഭത്തിൽ നിന്ന് പൈത്തൺ പഠിക്കുക
+kn,106,ಪೈಥಾನ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್,ಆರಂಭದಿಂದ ಪೈಥಾನ್ ಕಲಿಯಿರಿ
+fr,106,Programmation Python,Apprendre Python depuis le début
+
+en,107,Cloud Computing,Introduction to cloud concepts
+ta,107,கிளவுட் கம்ப்யூட்டிங்,கிளவுட் கருத்துகளின் அறிமுகம்
+hi,107,क्लाउड कंप्यूटिंग,क्लाउड कॉन्सेप्ट्स का परिचय
+te,107,క్లౌడ్ కంప్యూటింగ్,క్లౌడ్ కాన్సెప్ట్స్ పరిచయం
+ml,107,ക്ലൗഡ് കംപ്യൂട്ടിംഗ്,ക്ലൗഡ് ആശയങ്ങൾ പരിചയം
+kn,107,ಕ್ಲೌಡ್ ಕಂಪ್ಯೂಟಿಂಗ್,ಕ್ಲೌಡ್ ಕನ್ಸೆಪ್ಟ್ ಪರಿಚಯ
+fr,107,Informatique en Nuage,Introduction aux concepts cloud
+
+en,108,DevOps,CI CD and automation tools
+ta,108,டெவ்ஓப்ஸ்,CI CD மற்றும் தானியங்கி கருவிகள்
+hi,108,डेवऑप्स,CI CD और ऑटोमेशन टूल्स
+te,108,డెవాప్స్,CI CD మరియు ఆటోమేషన్ టూల్స్
+ml,108,ഡെവ്‌ഓപ്സ്,CI CD ഓട്ടോമേഷൻ ടൂൾസ്
+kn,108,ಡೆವ್ಓಪ್ಸ್,CI CD ಮತ್ತು ಆಟೋಮೇಷನ್ ಸಾಧನಗಳು
+fr,108,DevOps,Outils CI CD et automatisation
+
+en,109,Cyber Security,Basics of network security
+ta,109,சைபர் பாதுகாப்பு,நெட்வொர்க் பாதுகாப்பு அடிப்படைகள்
+hi,109,साइबर सुरक्षा,नेटवर्क सुरक्षा के मूल सिद्धांत
+te,109,సైబర్ సెక్యూరిటీ,నెట్‌వర్క్ సెక్యూరిటీ మౌలికాలు
+ml,109,സൈബർ സുരക്ഷ,നെറ്റ്‌വർക്ക് സുരക്ഷ അടിസ്ഥാനങ്ങൾ
+kn,109,ಸೈಬರ್ ಸೆಕ್ಯೂರಿಟಿ,ನೆಟ್‌ವರ್ಕ್ ಭದ್ರತೆ ಮೂಲಭೂತಗಳು
+fr,109,Cybersécurité,Bases de la sécurité réseau
+
+en,110,AI Fundamentals,Introduction to Artificial Intelligence
+ta,110,ஏஐ அடிப்படை,செயற்கை நுண்ணறிவு அறிமுகம்
+hi,110,एआई फंडामेंटल्स,आर्टिफिशियल इंटेलिजेंस का परिचय
+te,110,ఏఐ ఫండమెంటల్స్,కృత్రిమ మేధస్సు పరిచయం
+ml,110,എഐ അടിസ്ഥാനങ്ങൾ,കൃത്രിമ ബുദ്ധി പരിചയം
+kn,110,ಎಐ ಮೂಲಭೂತಗಳು,ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ ಪರಿಚಯ
+fr,110,Notions d'IA,Introduction à l'intelligence artificielle

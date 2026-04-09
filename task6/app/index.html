@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>🌍GeoScope</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to bottom, #87CEEB, #3CB371, #8B4513);
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2F4F4F;
+        }
+
+        .container {
+            width: 350px;
+            margin: auto;
+            background: rgba(255,255,255,0.95);
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        select, input {
+            padding: 8px;
+            margin: 3px;
+            width: 90%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 8px;
+            background: #2E8B57;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 95%;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #276747;
+            transform: scale(1.02);
+        }
+
+        .input-area {
+            min-height: auto;  
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #addressDiv input {
+            margin: 2px 0;
+        }
+
+        #details div {
+            background: #F5F5DC;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        iframe {
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🌍 GeoScope</h1>
+
+<div class="container">
+
+    <select id="type" onchange="toggleInputs()">
+        <option value="location">Pincode</option>
+        <option value="state">State</option>
+        <option value="country">Country Code</option>
+        <option value="address">Full Address</option>
+    </select>
+
+    <div class="input-area">
+
+       
+        <div id="singleInput">
+            <input type="text" id="inputValue" placeholder="Enter value">
+        </div>
+
+        
+        <div id="addressDiv" class="hidden">
+            <input id="doorno" placeholder="Door No">
+            <input id="street" placeholder="Street">
+            <input id="city" placeholder="City">
+            <input id="state" placeholder="State">
+            <input id="country" placeholder="Country">
+            <input id="pincode" placeholder="Pincode">
+        </div>
+
+    </div>
+
+    <button onclick="getDetails()">Search</button>
+
+</div>
+
+<br>
+
+<iframe id="map" width="100%" height="400"></iframe>
+
+<div id="details"></div>
+
+<script>
+
+function toggleInputs() {
+    const type = document.getElementById("type").value;
+
+    if (type === "address") {
+        document.getElementById("singleInput").classList.add("hidden");
+        document.getElementById("addressDiv").classList.remove("hidden");
+    } else {
+        document.getElementById("singleInput").classList.remove("hidden");
+        document.getElementById("addressDiv").classList.add("hidden");
+    }
+}
+async function getDetails() {
+
+    const type = document.getElementById("type").value;
+    let url = "";
+
+    if (type === "location") {
+        url = `/odata/v4/geolocation/getLocationdetails(userinput='${inputValue.value}')`;
+    }
+    else if (type === "state") {
+        url = `/odata/v4/geolocation/getdistrictdetails(state='${inputValue.value}')`;
+    }
+    else if (type === "country") {
+        url = `/odata/v4/geolocation/getstates(countryCode='${inputValue.value}')`;
+    }
+    else if (type === "address") {
+
+        const d = encodeURIComponent(doorno.value);
+        const s = encodeURIComponent(street.value);
+        const c = encodeURIComponent(city.value);
+        const st = encodeURIComponent(state.value);
+        const co = encodeURIComponent(country.value);
+        const p = encodeURIComponent(pincode.value);
+
+        url = `/odata/v4/geolocation/getAddressdetails(Doorno='${d}',streetname='${s}',city='${c}',state='${st}',country='${co}',pincode='${p}')`;
+    }
+
+    try {
+        const res = await fetch(url);
+        const result = await res.json();
+        const data = result.value;
+
+        if (!data || data.length === 0) {
+            alert("No data found");
+            return;
+        }
+
+        let html = "";
+
+        data.forEach(loc => {
+            html += `
+                <div onclick="showOnMap(${loc.latitude}, ${loc.longitude})">
+                    <b>${loc.name}</b><br>
+                    Lat: ${loc.latitude} | Lon: ${loc.longitude}
+                </div>
+            `;
+        });
+
+        document.getElementById("details").innerHTML = html;
+
+        showOnMap(data[0].latitude, data[0].longitude);
+
+    } catch (err) {
+        console.error(err);
+        alert("Error fetching data");
+    }
+}
+
+
+function showOnMap(lat, lon) {
+    document.getElementById("map").src =
+        `https://www.google.com/maps?q=${lat},${lon}&output=embed`;
+}
+
+</script>
+
+</body>
+</html>

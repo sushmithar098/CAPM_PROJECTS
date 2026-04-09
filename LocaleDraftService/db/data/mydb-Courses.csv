@@ -1,0 +1,11 @@
+id,title,description,duration,student_id
+101,Java Basics,Introduction to Java programming,30,1
+102,Web Development,HTML CSS and JavaScript fundamentals,45,1
+103,Data Structures,Learn arrays stacks and queues,40,2
+104,Database Systems,Introduction to SQL and databases,35,2
+105,Machine Learning,Basics of ML algorithms,50,3
+106,Python Programming,Learn Python from scratch,30,3
+107,Cloud Computing,Introduction to cloud concepts,25,4
+108,DevOps,CI CD and automation tools,30,4
+109,Cyber Security,Basics of network security,20,5
+110,AI Fundamentals,Introduction to Artificial Intelligence,45,5

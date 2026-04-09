@@ -1,0 +1,11 @@
+availability_id,available_date,start_time,end_time,status,trainer_trainer_id
+1,2026-03-24,09:00,11:00,Available,1
+2,2026-03-24,11:00,13:00,Booked,2
+3,2026-03-24,14:00,16:00,Available,3
+4,2026-03-25,09:00,11:00,Available,4
+5,2026-03-25,11:00,13:00,Booked,5
+6,2026-03-25,14:00,16:00,Available,1
+7,2026-03-26,09:00,11:00,Available,2
+8,2026-03-26,11:00,13:00,Booked,3
+9,2026-03-26,14:00,16:00,Available,4
+10,2026-03-26,16:00,18:00,Available,5
