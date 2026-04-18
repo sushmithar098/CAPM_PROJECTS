@@ -15,7 +15,9 @@ service details {
     entity  author as projection on db.Author;
     entity book as projection on db.Book ;
     entity authorbook as projection  on db.AuthorBooks;
-
-
+    entity orderss as projection on db.Orderss;
+    entity  orderitems as projection on db.Orderss.Detail;
+    entity blog  as projection on db.BlogPosts;
+    entity comments as projection on db.BlogPosts.Comments;
 
 }

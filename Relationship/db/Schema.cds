@@ -72,8 +72,8 @@ entity Car {
 entity Engine {
   key ID   : Integer;
       type : String;
-      car  : Association to Car; //one to one
-}
+      car  : Association to Car; //one to one composition unmanaged
+} 
 
 entity House {
   key ID    : Integer;
@@ -84,10 +84,10 @@ entity House {
 entity Room {
   key ID    : Integer;
       name  : String;
-      house : Association to House; //one to many composition
+      house : Association to House; //one to many composition unmanaged
 }
 
-
+/******** // many to many unmanged compostion************* */
 entity Author {
   key ID    : Integer;
       name  : String;
@@ -106,5 +106,28 @@ entity Book {
 
 entity AuthorBooks {
   key author : Association to Author;
-  key book   : Association to Book;
+  key book   : Association to Book; // many to many compostion
+}
+
+
+
+entity Orderss {
+  key ID : Integer; //one to one  managed composition
+
+  Detail : Composition of one {
+    description : String;
+    address     : String;
+  };
+}
+
+
+
+entity BlogPosts {
+  key ID : Integer;
+//one to many managed composition
+  Comments : Composition of many {
+    key pos : Integer;
+    text : String;
+    author : String;
+  };
 }

@@ -12,7 +12,7 @@ entity Student {
                   on submissions.student = $self;
 }
 
-type CourseStatus : String enum {
+type CourseStatus : String @assert.range enum {
     Open    = 'O';
     Closed  = 'C';
     Ongoing = 'G';
@@ -20,7 +20,7 @@ type CourseStatus : String enum {
 
 entity Course {
     key course_id    : Integer;
-         @assert.enum
+       
         status       : CourseStatus;
         title        : String;
         credits      : Integer;
@@ -53,9 +53,11 @@ entity Course_assessment {
 
 entity Submission {
     key submission_id : Integer;
+    
         marks         : Integer;
-        @assert.enum: ['P', 'F']
-        status        : String ;
+        // @assert.enum  : ['P', 'F']
+        status        : String @assert.range enum {Pass='p';
+        Fail='f'};
         student       : Association to one Student;
         ass           : Association to one Assignment ;
 
