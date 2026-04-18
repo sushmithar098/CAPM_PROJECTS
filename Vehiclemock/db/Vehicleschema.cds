@@ -13,11 +13,18 @@ entity Vehicles :managed {
        
         order      : Composition of many Orders
                          on order.vehicle = $self;
-        state      : Association to States;
-       
-     
+        state      : Association to States;   
 
-
+}
+entity Dealers {
+    key dealer_id   : String;
+        dealer_name : String;
+        location    : String;
+        latitude    : String;
+        longitude   : String;
+        vehicles : Association to many Vehicles
+               on vehicles.dealer.dealer_id =dealer_id;
+                       
 }
 
 entity Customer {
@@ -29,16 +36,7 @@ entity Customer {
                          on order.customer = $self;
 }
 
-entity Dealers {
-    key dealer_id   : String;
-        dealer_name : String;
-        location    : String;
-        latitude    : String;
-        longitude   : String;
-        vehicles : Association to many Vehicles
-               on vehicles.dealer.dealer_id =dealer_id;
-                       
-}
+
 
 entity Orders {
     key order_id : String;

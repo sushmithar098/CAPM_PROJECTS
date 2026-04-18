@@ -70,19 +70,24 @@ module.exports = cds.service.impl(async function () {
 
 
     this.on('READ', dealer, async (req) => {
-        if (req.params.length > 0) {
-            const { dealer_id } = req.params[0]
+      
+     if (req.params.length > 0) {
+           const { dealer_id } = req.params[0]
             if (dealer_id) {
                 return await SELECT.one.from(dealer).where({ dealer_id });
 
-            }
+             }
         }
 
-        return await SELECT.from(dealer);
+        return await SELECT.from(dealer)
 
     })
 
-
+// this.on('READ', dealer, async () => {
+   
+//         return await SELECT.from(dealer).where({ location :'Chennai'});
+  
+// });
 
     this.before('UPDATE', dealer, async (req) => {
         const { dealer_id } = req.params[0]
@@ -222,15 +227,15 @@ module.exports = cds.service.impl(async function () {
     })
 
     this.on('READ', vehicle, async (req) => {
-        if (req.params.length > 0) {
-            const { vehicle_id } = req.params[0]
+        // if (req.params.length > 0) {
+            // const { vehicle_id } = req.params[0]
+            const{location}=req.data
 
+            // if (vehicle_id) {
+            //     return await SELECT.one.from(vehicle).where({ vehicle_id })
 
-            if (vehicle_id) {
-                return await SELECT.one.from(vehicle).where({ vehicle_id })
-
-            }
-        }
+            // }
+        // }
         return await SELECT.from(vehicle)
 
     })

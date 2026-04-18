@@ -7,8 +7,8 @@ service transportsapi {
 
     // entity vehicle1  as
     //     select from vehicle {
-    //         vehicle_regno
-    //     };
+    //         count(vehicle_regno ) as vr
+    //     }  ;
   
     entity order     as projection on db.Orders;
     entity dealer    as projection on db.Dealers;

@@ -1,5 +1,5 @@
 namespace mydb;
-@odata.draft.enabled
+// @odata.draft.enabled
 entity Students {
     key id      : Integer;
         name    : localized String(100);

@@ -4,13 +4,12 @@ entity Student {
     key student_id : Integer;
         name       : String;
         email      : String;
-        gender     : String enum {
-            Male;
-            Female;
-            Others;
-        };
+        
+        gender     : String ;
         enroll     : Association to many Enrollment
                          on enroll.studid = $self;
+       submissions : Association to many Submission
+                  on submissions.student = $self;
 }
 
 type CourseStatus : String enum {
@@ -21,6 +20,7 @@ type CourseStatus : String enum {
 
 entity Course {
     key course_id    : Integer;
+         @assert.enum
         status       : CourseStatus;
         title        : String;
         credits      : Integer;
@@ -54,11 +54,9 @@ entity Course_assessment {
 entity Submission {
     key submission_id : Integer;
         marks         : Integer;
-        status        : String enum {
-            Pass =  'P';
-            Failed = 'F'; //data shpuld send like p or f and in database  p or f
-        };
+        @assert.enum: ['P', 'F']
+        status        : String ;
         student       : Association to one Student;
-        ass           : Association to one Assignment
+        ass           : Association to one Assignment ;
 
 }

@@ -1,4 +1,4 @@
-using {studentcourse.db as db} from '/home/user/studentcourses/db/scschema.cds';
+using {studentcourse.db as db} from '../db/scschema';
 service scapi
 {
 entity   student as projection on db.Student ;
